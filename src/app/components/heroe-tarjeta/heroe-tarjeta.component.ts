@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { HeroesService } from '../../servicios/heroes.service';
+import { Heroe } from '../../models/heroe';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HeroeTarjetaComponent implements OnInit {
 
-  @Input() heroe: any = {};
+  @Input() heroe: Heroe;
   @Input() index: number;
 
   @Output() heroeSeleccionado: EventEmitter<number>;
